@@ -1,0 +1,104 @@
+/* SCompimg */
+
+.sod-scompimg {
+    clear: both;
+    display: inline-block;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.scompimg-base {
+	position: relative;
+	margin: 0 auto;
+}
+
+.scompimg-contets {
+	position: relative;
+	overflow: hidden;
+}
+
+.sod-scompimg .ondrag {
+	cursor: col-resize;
+}
+
+.scompimg-contets .scompimg-imgc {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.scompimg-imgc.fimg {
+	z-index: 10;
+}
+
+.scompimg-links {
+	width: 100%;
+	margin-top: 8px;
+}
+.scompimg-before {
+	float: left;
+}
+.scompimg-after {
+	float: right;
+}
+
+.scompimg-dragable {
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	z-index: 11;
+}
+
+.scompimg-dragable .scompimg-line {
+	height: 100%;
+	width: 2px;
+	background: #222;
+	margin-left: -1px;
+}
+
+.scompimg-dragable .scompimg-handle {
+	opacity: .3;
+	height: 30px;
+	width: 30px;
+	background: #333;
+	border: 1px solid #222;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left: -16px;
+	margin: auto 0;
+	cursor: col-resize;
+	border-radius: 99px;
+	-webkit-transition: opacity 150ms ease-in-out;
+	-moz-transition: opacity 150ms ease-in-out;
+	-ms-transition: opacity 150ms ease-in-out;
+	-o-transition: opacity 150ms ease-in-out;
+	transition: opacity 150ms ease-in-out;
+}
+
+.scompimg-base:hover .scompimg-handle {
+	opacity: 1;
+}
+
+.scompimg-handle:after, .scompimg-handle:before {
+	position: absolute;
+	content: "";
+	width: 0; height: 0;
+	margin: auto;
+	border-style: solid;
+	border-width: 4px 8px 4px 0;
+	border-color: transparent #eee transparent transparent;
+	top: 0; bottom: 0;
+	left: 4px;
+}
+
+.scompimg-handle:before {
+	border-width: 4px 0 4px 8px;
+	border-color: transparent transparent transparent #eee;
+	left: auto; right: 4px;
+}
