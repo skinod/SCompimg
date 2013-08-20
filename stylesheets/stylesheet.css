@@ -90,16 +90,13 @@ header h2 {
 }
 
 .inner {
-  width: 620px;
+  width: 800px;
   margin: 0 auto;
 }
 
-#container .inner img {
-  max-width: 100%;
-}
-
 #downloads {
-  margin-bottom: 40px;
+  margin:0 auto 40px;
+  width: 620px;
 }
 
 a.button {
